@@ -1,0 +1,15 @@
+﻿@using web2.Utilities
+@model IList<Menu>
+
+<div class="menu-desktop">
+	<ul class="main-menu">
+
+		@foreach (var item in Model.OrderBy(n => n.ThuTu)){
+			<li class="active-menu">
+				<a style="font-family: Helvetica; color: #000;" href="/@item.ControllerName/@item.ActionName">@item.Ten</a>
+			</li>
+		}	
+
+	</ul>
+</div>
+

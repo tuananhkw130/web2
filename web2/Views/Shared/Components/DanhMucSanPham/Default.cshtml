@@ -1,0 +1,16 @@
+﻿
+@model IList<DanhMuc>
+
+<div class="sidebar_section">
+	<div class="sidebar_title">
+		<h5>Danh Mục Sản Phẩm</h5>
+	</div>
+	<ul class="sidebar_categories">
+		@foreach (var item in Model)
+		{
+			<li><a asp-controller="Home" asp-action="CuaHang" asp-route-id="@item.ID">@item.TenDanhMuc</a></li>
+		}
+		
+		
+	</ul>
+</div>
